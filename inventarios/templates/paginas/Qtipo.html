@@ -1,0 +1,73 @@
+{% extends 'index.html' %}
+{% block titulo %} Qtipo {% endblock %}
+{% block contenido %}
+<div class="card col-md-4 offset-md-4 mt-5" >
+    <div class="card-body">
+        <h4 class="card-title" align="center">Tipo 
+        </h4>
+    </div>
+    <!--formulario-->
+    <form enctype="multipart/form-data" method="POST" >
+        <div class="container-fluid">
+            <div class="row" id="map_section">
+                <div class="col-12">
+                {% csrf_token %}
+                {% if form.errors %}
+            <div class="alert alert-primary alert-dismissible" role="alert">
+                <div id="form_errors">
+                {% for key, value in form.errors.items %}
+                <strong>{{ value }}</strong>
+                {% endfor %}
+                </div>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close" >
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            {% endif %}
+            <div class="block ">
+                <label for="tipo_producto"><b>tipo:</b></label>
+                {{ form.tipo2_name}} 
+            </div>
+               
+          <div class="gap-3 d-md-flex justify-content-md-left mb-3">
+            <p><input class="btn btn-primary" name="submit" type="submit" value="Guardar"></p>
+            <p><input class="btn btn-primary" name="reset" type="reset" value="Restaurar"></p>
+          </div>
+          </div>
+        </div>
+      </div>   
+    </form>
+  </div>
+<!----tabla------->
+<div class="card col-md-2 offset-md-4 mt-4">
+    <div method="post">  
+        <table class="table table-sm">
+            <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Tipo</th>
+            </tr>
+            </thead>
+            &nbsp;    
+            <tbody class="tbody-lg">
+            {% for tipo2 in Qtipo %}
+            <tr>
+                <td>{{ tipo2.tipo2_id  }}</td>
+                <td>{{ tipo2.tipo2_name }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>    
+        <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+    integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous">
+    </script>  
+
+
+{% endblock %}
