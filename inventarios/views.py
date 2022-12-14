@@ -104,4 +104,17 @@ def Qtipo (request):
         form.save()
         return redirect('Qtipo')
     return render(request, 'paginas/Qtipo.html', {'form': form, 'Qtipo':Qtipo})
+def delete(request, tipo2_id):
+    object = tipo2.objects.get(tipo2_id = tipo2_id)
+    object.delete()
+    return redirect('Qtipo')
+def delete2(request, marca_id):
+    object = marca.objects.get(marca_id = marca_id)
+    object.delete()
+    return redirect('Qmarca')
+def delete3(request, distribuidor_id):
+    object = distribuidor.objects.get(distribuidor_id = distribuidor_id)
+    object.delete()
+    return redirect('Distribuidores')
+
     

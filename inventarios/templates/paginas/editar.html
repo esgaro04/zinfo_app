@@ -3,10 +3,7 @@
 {% block contenido %}
 <div class="card col-md-4 offset-md-4 mt-5" >
     <div class="card-body">
-        <h4 class="card-title" align="center">Modifica tú producto 
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAb1JREFUSEu1leE1BEEQhOsiQATIgAgQASJABIgAESACRIAIEAEZIAMi4H33urw2t7M7997e/NrbuamurqqenWjBa7JgfLUW2JZ0I2ktCH1IOpL0PESwtQCAqwUY79bHKADr9wAyoZ/4TQEKVVdXB+eStuLgl6STOP0taTmeeb8Uz1fxHiJIdpGrlQUOQ+uS0Z0kCpstYPw+6KCON7d+nwvA7jWMhAUgmLsn6a2iwYakh2BO8bMgsSmJLv+lCLAnSS8BnDEpdikJQBYFTzv0RyLk3XHCcgcwvU+6AsACnM6svwvDEKaWDS+OY3M/OpuZg+wBh2GKBLvRGfssNIbpY0jo7tmremBmjqC7c2JyJB3dPAvluSleV0znKfCZprupAJnHTFYpEQbSPotrA1nmkiibfJ0GDDnwwoNlKRk8UtVsso2CKTErY0pKckzptrwmemNKDDkAU6bUg0bk+gaNaAPMWc7hC0RmBg3GtauCWDLd+apgah3b3O1gTGkdPwCDhYeH55VAypcdftE9HTMzSPm3Wr4Ho1/Xhb/Tn5mx9/MMdJ2pDlrXn0kYPvirBjj6j/bJrDIc2mjxYAijd/8X17lwGX/yQpcAAAAASUVORK5CYII="
-            height="30" width="30"/>
-        </h4>
+        <h4 class="card-title" align="center">Modifica tú producto </h4>
     </div>
     <form enctype="multipart/form-data" method="POST" >
         <div class="container-fluid">
@@ -63,7 +60,7 @@
             <div class="block ">
                 <label for="date"><b>Fecha de vencimiento:</b></label>
                 <br>
-                <div class="col-sm-4">
+                <div class="col-sm-3">
                     <div class="input-group date" id="datetimepicker1">
                     {{ form.fecha_vencimiento }}
                     <span class="input-group-addon">
@@ -82,7 +79,9 @@
                 <br>
           <div class="gap-3 d-md-flex justify-content-md-left mb-3">
             <p><input class="btn btn-primary" name="submit" type="submit" value="Guardar"></p>
+            <br>
             <p><input class="btn btn-primary" name="reset" type="reset" value="Restaurar"></p>
+            
           </div>
           
           </div>

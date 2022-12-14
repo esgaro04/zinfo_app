@@ -23,7 +23,7 @@ class distribuidorModelChoiceField(forms.ModelChoiceField):
 
 class productosForm(forms.Form):
     fecha_vencimiento_input = forms.DateField(widget=AdminDateWidget())
-
+   
 class productosForm(forms.ModelForm):
     class Meta:
         model = productos

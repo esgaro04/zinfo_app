@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
       
   </head>
-  <body style="background-image:url('{% static 'imagenes/fondo 3.jpg' %}'); padding: 90px 20px 0;">
+  <body style="background-image:url('{% static 'imagenes/fondo 3.jpg' %}'); padding: 70px 20px 40px; 10px">
     <header class="header">
       <div class="container">
       <div class="btn-menu">
@@ -23,7 +23,7 @@
           <h1>Zinfonia market </h1>
         </div>
         <nav class="menu">
-          <a href="{% url 'logout' %}"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" style="fill: rgba(100%, 100%, 100%);transform: ;msFilter:;"><path d="M5.002 21h14c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2h-14c-1.103 0-2 .897-2 2v6.001H10V7l6 5-6 5v-3.999H3.002V19c0 1.103.897 2 2 2z"></path></svg></a>
+          <a href="{% url 'logout' %}">Cerrar sesión <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style="fill:  rgb(100% 100% 100%);transform: ;msFilter:;"><path d="M5 5v14a1 1 0 0 0 1 1h3v-2H7V6h2V4H6a1 1 0 0 0-1 1zm14.242-.97-8-2A1 1 0 0 0 10 3v18a.998.998 0 0 0 1.242.97l8-2A1 1 0 0 0 20 19V5a1 1 0 0 0-.758-.97zM15 12.188a1.001 1.001 0 0 1-2 0v-.377a1 1 0 1 1 2 .001v.376z"></path></svg></a>
         </nav>
       </div>
     </header>
@@ -38,7 +38,7 @@
         <a href="{% url 'Qtipo' %}">Tipos</a>
         <a href="{% url 'Qmarca' %}">Marcas</a>
         <a href="{% url 'Distribuidores' %}">Distribuidores</a>
-        <a href="#">Apunto de vencer</a>
+       
         
       </nav>
       <label for="btn-menu">✖️</label>

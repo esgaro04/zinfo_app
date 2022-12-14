@@ -22,6 +22,9 @@ urlpatterns = [
     path('Qtipo/', views.Qtipo, name='Qtipo'), 
     path('Distribuidores/', views.Distribuidores, name='Distribuidores'),
     path('Qmarca/', views.Qmarca, name='Qmarca'),
+    path('delete/<int:tipo2_id>', views.delete, name='delete'),
+    path('delete2/<int:marca_id>', views.delete2, name='delete2'),
+    path('delete3/<int:distribuidor_id>', views.delete3, name='delete3'),
 ]   
 
  

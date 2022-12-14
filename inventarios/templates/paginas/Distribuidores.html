@@ -39,13 +39,14 @@
     </form>
   </div>
 <!----tabla------->
-<div class="card col-md-2 offset-md-4 mt-4">
+<div class="card col-md-4 offset-md-4 mt-5" >
     <div method="post">  
         <table class="table table-sm">
             <thead class="thead-dark">
             <tr>
                 <th>ID</th>
                 <th>Distribuidores</th>
+                <th></th>
             </tr>
             </thead>
             &nbsp;    
@@ -54,6 +55,7 @@
             <tr>
                 <td>{{ distribuidor.distribuidor_id  }}</td>
                 <td>{{ distribuidor.distribuidor_name }}</td>
+                <td><p><a name="delete" id="" class="btn btn-danger btn-block btn-sm" style="width:25px; height:25px;" href="{% url 'delete3' distribuidor.distribuidor_id %}" role="button">X</a></p></td>
             </tr>
             {% endfor %}
             </tbody>
